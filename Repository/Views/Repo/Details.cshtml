@@ -1,0 +1,30 @@
+﻿@model ASP.Net6Repository.Models.Repository
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Repository</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SathyaName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SathyaName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SathyaLocation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SathyaLocation)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.SathyaId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

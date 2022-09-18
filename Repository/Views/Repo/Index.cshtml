@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ASP.Net6Repository.Models.Repository>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SathyaName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SathyaLocation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SathyaName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SathyaLocation)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SathyaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SathyaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SathyaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
